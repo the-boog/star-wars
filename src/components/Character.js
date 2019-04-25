@@ -4,7 +4,13 @@ import axios from 'axios';
 
 
 class Character extends React.Component {
-  state={character: {}, modalOpen: false}
+  state={characterImages: [
+  "https://www.writeups.org/wp-content/uploads/Mytasha-Shiv-SWTOR-Smuggler.jpg", 
+  "https://vignette.wikia.nocookie.net/starwars/images/8/89/MaulHS_SWI185.png/revision/latest/scale-to-width-down/500?cb=20181108061212", 
+  "https://wh1k8zidop.inscname.net/games/images/map_img_887069_1481236446.jpg"
+
+],   
+  modalOpen: false}
 
   handleOpen =() => {
     this.setState({modalOpen: true})
@@ -32,7 +38,7 @@ class Character extends React.Component {
         </div>
         <Modal
         
-        style={{background: 'black', width: '50%'}}
+        style={{background: 'black', width: '50%',}}
           open={this.state.modalOpen}
           onClose={() => this.handleClose()}
         >

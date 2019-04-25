@@ -24,11 +24,11 @@ class Planet extends React.Component {
             color: '#f2e148', 
             fontWeight: 'bold',
             cursor: 'pointer',
-            fontSize: '1em',
+            fontSize: '.8em',
             paddingRight: '15px',
             
                 }}>
-        {this.props.planet && this.props.planet.name}
+        Home Planet - {this.props.planet && this.props.planet.name}
         </div>
         <Modal
         
@@ -36,7 +36,6 @@ class Planet extends React.Component {
           open={this.state.modalOpen}
           onClose={() => this.handleClose()}
         >
-        
             <Modal.Content  
             onClick={()=> this.handleClose()}
             style={{background: 'black', color: '#f2e148', fontFamily: 'Copperplate', opacity: '1'}}>
@@ -51,16 +50,15 @@ class Planet extends React.Component {
               </div>
                 <div inline style={{marginLeft: '20px'}}>Climate - { this.props.planet && this.props.planet.climate} </div>
                 <div style={{marginLeft: '20px'}}>Diameter - { this.props.planet && this.props.planet.diameter} kilometers, </div>
-                <div style={{marginLeft: '20px'}}>Gravity - { this.props.planet && this.props.planet.gravity},</div>
+                <div style={{marginLeft: '20px'}}>Gravity - { this.props.planet && this.props.planet.gravity} gravitational unit(s),</div>
                 <div style={{marginLeft: '20px'}}>Orbital Period - { this.props.planet && this.props.planet.orbital_period} days, </div>
                 <div style={{marginLeft: '20px'}}>Population - { this.props.planet && this.props.planet.population}, </div>
-                <div style={{marginLeft: '20px'}}>Rotation Period - {this.props.planet && this.props.planet.rotation_period}, </div>
-                <div style={{marginLeft: '20px'}}>Surface Water - {this.props.planet && this.props.planet.surface_water}, </div>
+                <div style={{marginLeft: '20px'}}>Rotation Period - {this.props.planet && this.props.planet.rotation_period} hours, </div>
+                <div style={{marginLeft: '20px'}}>Bodies of Water - {this.props.planet && this.props.planet.surface_water}, </div>
                 <div style={{marginLeft: '20px'}}>Terrain - {this.props.planet && this.props.planet.terrain} </div>
                 </span>
                 </span>
             </Modal.Content>
-         
         </Modal>
 
       </>

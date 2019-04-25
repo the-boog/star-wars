@@ -85,7 +85,7 @@ class Characters extends React.Component {
     return(
       <>
 
-      <Container style={{background: 'green', height: '80%', opacity: '.5', width: "80%", display: 'flex', flexWrap: 'wrap' }}>
+      <Container style={{ height: '80%', width: "70%", display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
       {characters.map( char =>
         
       <div key={char.name} style={{padding: '5px', }}>
